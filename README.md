@@ -1,4 +1,4 @@
 # redshift-gtk-ui-fake
-A GUI for Jon Lund Steffensen's Redshift tool, written with Python 3 and Tkinter. Written on Lubuntu.
+An extremely simple GUI for Redshift, written with Python 3 on Lubuntu.
 
-Required: Python3, redshift-gtk
+Required: Python3, redshift-gtk (by jonls)
