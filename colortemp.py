@@ -1,3 +1,4 @@
+
 #!/brando/bin/env python3
 import sys
 
@@ -23,18 +24,17 @@ def changeScreenColorTemp():
                 messagebox.showinfo("Warning", "Field cannot be empty")
         elif not entry.get().isdigit():
                 messagebox.showinfo("Warning", "Can only contain numerical values")
+        elif int(entry.get()) > 20000 or int(entry.get()) < 1000:
+                messagebox.showinfo("Warning", "Can only contain values between 1000 and 25000.")
         else:
                 selectedTemp = entry.get()
                 sub.call('redshift -O %s' % selectedTemp ,shell=True)
-                print(selectedTemp)
 
 close_button = tkinter.Button(root, text = "Quit", command=quit)
-you_suck_button = tkinter.Button(root, text = "Hey guess what", command = youKickAssCallBack)
 
 entry = tkinter.Entry(root)
-entry.insert(0, '5000 - 25000')
+entry.insert(0, '')
 entry.config(width=25, justify=CENTER, bd=4)
-you_suck_button.pack()
 entry.pack()
 
 change_screen_button = tkinter.Button(root, text = "Change Screen Temp", command=changeScreenColorTemp)
