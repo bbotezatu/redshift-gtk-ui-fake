@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Terminal=false
+Name=RedshiftUI_Fake
+Exec= python3 colortemp.py
+Comment=Assembler
+Icon= red_lightbulb
+Name[en]=RedshiftUI_Fake
