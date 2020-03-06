@@ -1,14 +1,11 @@
-
-#!/brando/bin/env python3
 import sys
-
-print(sys.version)
 from tkinter import *
+from tkinter.ttk import *
 from tkinter import messagebox
 import tkinter
 import subprocess as sub
 root = tkinter.Tk()
-root.geometry('300x300')
+root.geometry('400x250')
 
 
 root.title("Brandon's Redshift UI")
@@ -17,6 +14,9 @@ root.title("Brandon's Redshift UI")
 selectedTemp = ""
 def emptyTextFieldCallBack():
         messagebox.showinfo("Warning", "Missing a value between 5000 and 25000")
+
+def enterPressed(event):
+	 	changeScreenColorTemp()
 
 def changeScreenColorTemp():
         if entry.get() == "":
@@ -47,20 +47,18 @@ entry.pack()
 
 change_screen_button = tkinter.Button(root, text = "Change Screen Temp", command=changeScreenColorTemp)
 change_screen_button.pack()
-change_screen_button.config(height = 3, width = 25)
-
-"""
-min_button  = tkinter.Button(root, text="1000(minimum)", command= lambda: safeScreenChange(1000))
-min_button.pack()
-min_button.config(height=2, width=10)
-"""
+change_screen_button.config(height = 4, width = 20)
 
 
 scale.pack()
 scale.set(5000)
 
 close_button.pack()
-close_button.config(height=4, width=10)
+close_button.config(height=4, width=20)
+
+root.bind('<Return>', lambda k : enterPressed(k))
+root.bind('<Escape>', lambda p : exit())
+entry.focus_set()
 
 root.mainloop()
 
