@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
 [Desktop Entry]
 Version=1.0
 Encoding=UTF-8
 Type=Application
 Terminal=false
 Name=RedshiftUI_Fake
-Exec= python3 colortemp.py
+Exec= python3 /home/bbotezatu/Desktop/redshift-gtk-ui-fake/colortemp.py
 Comment=Assembler
-Icon= red_lightbulb
+Icon=/home/bbotezatu/Desktop/redshift-gtk-ui-fake/redlight_asset.png
 Name[en]=RedshiftUI_Fake
